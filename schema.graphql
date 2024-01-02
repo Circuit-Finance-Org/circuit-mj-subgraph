@@ -1,0 +1,15 @@
+type Deposit @entity {
+  id: ID!  # transaction hash
+  account: Bytes!  # User address
+  amount: BigInt!  # Deposit amount
+  timestamp: BigInt!  # Timestamp of the deposit
+  vault: Bytes!  # Address of the vault
+}
+
+type Withdraw @entity {
+  id: ID!  # transaction hash
+  account: Bytes!  # User address
+  amount: BigInt!  # Withdraw amount
+  timestamp: BigInt!  # Timestamp of the withdraw
+  vault: Bytes!  # Address of the vault
+}

@@ -1,0 +1,26 @@
+{
+  "name": "circuit-mj-subgraph",
+  "version": "1.0.0",
+  "description": "subgraph to track deposit and withdraw events",
+  "main": "index.js",
+  "scripts": {
+    "auth": "graph auth https://subgraph-api.mantle.xyz/deploy",
+    "prepare:mantle": "graph codegen && graph build",
+    "create:mantle": "graph create circuit-mj-subgraph --node https://subgraph-api.mantle.xyz/deploy",
+    "deploy:mantle": "yarn prepare:mantle && graph deploy circuit-mj-subgraph --node https://subgraph-api.mantle.xyz/deploy --ipfs https://subgraph-api.mantle.xyz/ipfs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Circuit-Finance-Org/circuit-mj-subgraph.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Circuit-Finance-Org/circuit-mj-subgraph/issues"
+  },
+  "homepage": "https://github.com/Circuit-Finance-Org/circuit-mj-subgraph#readme",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.58.0",
+    "@graphprotocol/graph-ts": "^0.31.0"
+  }
+}

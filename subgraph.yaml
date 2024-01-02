@@ -1,0 +1,225 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: lendle-meth-looped
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0x96520c74eF5CD3b4197871387cdd7C827463aBBb"
+      startBlock: 29883043
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: stargate-mantle-usdc
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0x3858a234aeB216647272e92245285FbDD0CEFB49"
+      startBlock: 24763947
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: stargate-mantle-usdt
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0xCE2a5f4E186d0B173059b6e71EC226F6ecD506A2"
+      startBlock: 24763892
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: ktx-mantle-ktc
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0x5b5EDFEC1D3d1906a71EBC23BD2b040302579388"
+      startBlock: 8547129
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: lendle-wmnt-looped
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0x2fA81D08d060c173305800D0bB72ebF71Ba2162B"
+      startBlock: 5192099
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: lendle-weth-looped
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0x803903BfCF6Aa63620F3598b1C60ccbA9C752276"
+      startBlock: 5192127
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: lendle-wbtc-looped
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0x693cb6bA442A19226f15233ab1D5a14530170398"
+      startBlock: 5192140
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: lendle-usdt-looped
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0xa7cF0544fDaC7e173fb73733429AaE8a27Cb2637"
+      startBlock: 5192170
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: lendle-usdc-looped
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0x5323E58f8A957823936d41637acB87311614104D"
+      startBlock: 5192199
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: lendle-lend-mnt
+    network: mantle
+    source:
+      abi: CircuitVault
+      address: "0xC8f1664b9725Fd0a0A2Ad288D82F2dFB53B56F4c"
+      startBlock: 5180594
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Account
+      abis:
+        - name: CircuitVault
+          file: ./abis/CircuitVault.json
+      eventHandlers:
+        - event: VaultDeposit(uint256)
+          handler: handleVaultDeposit
+        - event: VaultWithdraw(uint256)
+          handler: handleVaultWithdraw
+      file: ./src/mapping.ts
+      
